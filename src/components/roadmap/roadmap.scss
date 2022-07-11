@@ -1,0 +1,74 @@
+.roadmap {
+  width: 255px;
+  height: 178px;
+  margin-top: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  &__heading {
+    margin: 0;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+
+    color: #3a4374;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: #4661e6;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      color: #8397f8;
+    }
+  }
+
+  &__wrapper {
+    padding: 24px;
+    padding-top: 19px;
+  }
+
+  &__wrapper-top {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list-wrapper {
+    padding: 24px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__item {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #647196;
+  }
+
+  &__item-number {
+    list-style: none;
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: right;
+
+    color: #647196;
+  }
+}

@@ -1,0 +1,30 @@
+.intro {
+  height: 137px;
+
+  background: radial-gradient(
+    128.88% 128.88% at 103.9% -10.39%,
+    #e84d70 0%,
+    #a337f6 53.09%,
+    #28a7ed 100%
+  );
+  border-radius: 10px;
+
+  &--heading {
+    padding-left: 24px;
+    padding-top: 62px;
+    margin: 0;
+    font-family: sans-serif;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.25px;
+  }
+
+  &--span {
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/home/home";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+import "./assets/scss/main.scss";
+import SingleTodo from "./pages/single-pages/single";
+import AddTodo from "./pages/AddTodo/add-todo";
+import dataJs from "./components/data/data";
+import { useState } from "react";
+
+const App = () => {
+  const [feadbacks, setFeadbacks] = useState(dataJs);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home feadbacks={feadbacks} />} />
+      <Route
+        path="/add"
+        element={<AddTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />}
+      />
+      <Route
+        path="/SingleTodo/:id"
+        element={
+          <SingleTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />
+        }
+      />
+    </Routes>
   );
-}
+};
 
 export default App;

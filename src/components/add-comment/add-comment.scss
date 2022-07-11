@@ -1,0 +1,39 @@
+.add-comment {
+  &__section {
+    padding: 24px 33px;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #3a4374;
+  }
+
+  &__textarea {
+    margin: 0;
+    width: 680px;
+    height: 80px;
+    padding: 16px 24px;
+    background: #f7f8fd;
+    border-radius: 5px;
+  }
+
+  &__bottom {
+    margin-top: 27px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #647196;
+  }
+}

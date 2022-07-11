@@ -1,0 +1,19 @@
+.home {
+  padding: 94px 0 129px;
+}
+
+.home__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.home {
+  &__left {
+    width: 23%;
+  }
+
+  &__right {
+    width: 77%;
+    margin-left: 30px;
+  }
+}
