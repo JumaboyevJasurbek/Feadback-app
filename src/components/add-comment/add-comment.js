@@ -8,9 +8,10 @@ const AddComment = () => {
   const [textareaValue, settextareaValue] = useState("");
   const [message, setMessage] = useState("");
 
-  const leftLettersCount = MAX_COUNT - textareaValue.length;
+  const leftLettersCount = +(MAX_COUNT - textareaValue.length);
 
   const handlyTextareaChange = (evt) => {
+    evt.preventDefault();
     if (MAX_COUNT - evt.target.value.length >= 0) {
       settextareaValue(evt.target.value);
     }
@@ -35,13 +36,13 @@ const AddComment = () => {
           onChange={handlyTextareaChange}
           placeholder="Type your comment here"
         />
-        <div className="add-comment__bottom">
-          <p className="add-comment__text">
+        <div className="add-comment__div">
+          <p className="add-coment__text">
             {MAX_COUNT - textareaValue.length} Characters left
           </p>
           <Button>Post Comment</Button>
+          <p>{message}</p>
         </div>
-        {/* <p>{message}</p> */}
       </form>
     </div>
   );

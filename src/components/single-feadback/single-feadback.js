@@ -31,14 +31,14 @@ const SingleFeadback = ({ feadbacks }) => {
 
         {currentTodo ? (
           currentTodo.comments.map((todo) => (
-            <div key={todo.id} className="feedback-coment">
+            <div key={todo.id} className="feedback-comment">
               <div className="feedback-comment__list">
-                <div className="FCL-top">
-                  <div className="FCL-top__left">
+                <div className="feadback-top">
+                  <div className="feadback-top__left">
                     <img src={todo.user.image} alt="img" />
-                    <div className="FCL-top__name">
-                      <h5 className="FCL-top__title">{todo.user.name}</h5>
-                      <a className="FCL-top__link" href="/">
+                    <div className="feadback-top__name">
+                      <h5 className="feadback-top__title">{todo.user.name}</h5>
+                      <a className="feadback-top__link" href="/">
                         {todo.user.username}
                       </a>
                     </div>
@@ -47,8 +47,8 @@ const SingleFeadback = ({ feadbacks }) => {
                     <p className="reply">Reply</p>
                   </div>
                 </div>
-                <div className="FCL-bottom">
-                  <p className="FCL-bottom__text">{todo.content}</p>
+                <div className="feadback-bottom">
+                  <p className="feadback-bottom__text">{todo.content}</p>
                 </div>
               </div>
             </div>
