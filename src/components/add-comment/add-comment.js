@@ -10,9 +10,9 @@ const AddComment = () => {
 
   // const leftLettersCount = +(MAX_COUNT - textareaValue.length);
 
-  // const handlyFormSubmit = (evt) => {
-  //   evt.preventDefault;
-  // };
+  const handlyFormSubmit = (evt) => {
+    evt.preventDefault();
+  };
 
   const handlyTextareaChange = (evt) => {
     evt.preventDefault();
@@ -32,7 +32,7 @@ const AddComment = () => {
   return (
     <div className="add-comment__section">
       <h2 className="add-comment__heading">Add Comment</h2>
-      <form className="add-comment__form">
+      <form onSubmit={handlyFormSubmit} className="add-comment__form">
         <textarea
           className="add-comment__textarea"
           value={textareaValue}

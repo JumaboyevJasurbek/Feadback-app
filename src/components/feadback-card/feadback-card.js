@@ -10,30 +10,31 @@ import { Link } from "react-router-dom";
 
 const FeadbackCard = ({ todo }) => {
   // const [data, setData] = useState(dataJs);
+  // console.log(todo);
   return (
     <div todo={todo} className="feadback-card">
-      {todo.map((todo) => (
-        <div key={todo.id} className="feadback-box">
-          <div className="feadback-section">
-            <LikeButton className="like__button">
-              <img src={likeImg} alt="" /> {todo.upvotes}
-            </LikeButton>
-            <div className="feadback-section__wrapper">
-              <Link to={"/SingleTodo/ " + todo.id}>
-                <h2 className="feadback-section__heading">{todo.title}</h2>
-              </Link>
-              <p className="feadback-section__text">{todo.description}</p>
-              <TypeBadge>{todo.category}</TypeBadge>
-            </div>
-          </div>
-          <div className="feadback-section__right">
-            <img src={commentImg} alt="" />
-            <span className="feadback-section__right__span">
-              <div>{todo.comments ? todo.comments.length : 0}</div>
-            </span>
+      {/* {todo.map((todo) => ( */}
+      <div className="feadback-box">
+        <div className="feadback-section">
+          <LikeButton className="like__button">
+            <img src={likeImg} alt="" /> {todo.upvotes}
+          </LikeButton>
+          <div className="feadback-section__wrapper">
+            <Link to={"/SingleTodo/ " + todo.id}>
+              <h2 className="feadback-section__heading">{todo.title}</h2>
+            </Link>
+            <p className="feadback-section__text">{todo.description}</p>
+            <TypeBadge>{todo.category}</TypeBadge>
           </div>
         </div>
-      ))}
+        <div className="feadback-section__right">
+          <img src={commentImg} alt="" />
+          <span className="feadback-section__right__span">
+            <div>{todo.comments ? todo.comments.length : 0}</div>
+          </span>
+        </div>
+      </div>
+      {/* ))} */}
     </div>
   );
 };
