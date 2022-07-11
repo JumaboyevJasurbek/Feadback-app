@@ -23,76 +23,67 @@
     justify-content: space-between;
   }
 }
-.Feedback-head__btn {
-  border: none;
-}
-.Feedback-head__editBtn {
-  padding: 12px 24px;
-  border-radius: $radius;
-  border: none;
-  background-color: #4661e6;
-  color: #f2f4fe;
-}
-.Feedback-head__left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+
 .feedback-comment {
   display: flex;
   flex-direction: column;
   margin: 12px 32px;
   border-radius: $radius;
-}
-.feedback-comment__list {
-  display: flex;
-  flex-direction: column;
-  width: 666px;
-  height: 123px;
-  row-gap: 20px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 666px;
+    height: 123px;
+    row-gap: 20px;
+  }
 }
 .feadback-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-}
-.feadback-top__left {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.feadback-top__name {
-  // margin: 0;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-}
-.feadback-top__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: -0.194444px;
-  color: #3a4374;
-  margin: 0;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__name {
+    // margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.194444px;
+    color: #3a4374;
+    margin: 0;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #647196;
+  }
 }
 
-.feadback-top__link {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-
-  color: #647196;
-}
-.feadback-bottom__text {
-  width: 594px;
-  margin: 0;
-  margin-left: 72px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-
-  color: #647196;
+.feadback-bottom {
+  &__text {
+    width: 594px;
+    margin: 0;
+    margin-left: 72px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #647196;
+  }
 }
 .reply {
   font-weight: 600;

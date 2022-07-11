@@ -8,7 +8,11 @@ const AddComment = () => {
   const [textareaValue, settextareaValue] = useState("");
   const [message, setMessage] = useState("");
 
-  const leftLettersCount = +(MAX_COUNT - textareaValue.length);
+  // const leftLettersCount = +(MAX_COUNT - textareaValue.length);
+
+  // const handlyFormSubmit = (evt) => {
+  //   evt.preventDefault;
+  // };
 
   const handlyTextareaChange = (evt) => {
     evt.preventDefault();
@@ -18,7 +22,7 @@ const AddComment = () => {
   };
 
   useEffect(() => {
-    if (leftLettersCount === 0) {
+    if (MAX_COUNT - textareaValue.length === 0) {
       setMessage("soz tugadi :>");
     } else {
       setMessage("soz kiriting");

@@ -18,7 +18,7 @@ const SingleFeadback = ({ feadbacks }) => {
           <img className="add__path" src={addPath} alt="img" />
           <p className="add__back-home">Go Back</p>
         </Link>{" "}
-        <Button className="fea=edback--">Edit Feedback</Button>
+        <Button className="feaedback--">Edit Feedback</Button>
       </div>
       <div className="feedback-list">
         <div className="feedback">
