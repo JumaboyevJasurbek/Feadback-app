@@ -56,37 +56,5 @@ const SingleFeadback = ({ todo }) => {
     </Container>
   );
 };
-// const Feedback = ({feedbacks}) => {
-//   const {id} = useParams()
-//   const currentTodo = feedbacks.find(todo => todo.id === +id)
-//
-// const [data] = useState(dataJs);
-// return (
-//   <div className="feadback-card">
-//     {data.map((todo) => (
-//       <div key={todo.id} className="feadback-box">
-//         <div className="feadback-section">
-//           <LikeButton className="like__button">
-//             <img src={likeImg} alt="" /> {todo.upvotes}
-//           </LikeButton>
-//           <div className="feadback-section__wrapper">
-//             <Link to="/SingleTodo">
-//               <h2 className="feadback-section__heading">{todo.title}</h2>
-//             </Link>
-//             <p className="feadback-section__text">{todo.description}</p>
-//             <TypeBadge>{todo.category}</TypeBadge>
-//           </div>
-//         </div>
-//         <div className="feadback-section__right">
-//           <img src={commentImg} alt="" />
-//           <span className="feadback-section__right__span">
-//             <div>{todo.comments ? todo.comments.length : 0}</div>
-//           </span>
-//         </div>
-//       </div>
-//     ))}
-//   </div>
-// );
-// };
 
 export default SingleFeadback;
