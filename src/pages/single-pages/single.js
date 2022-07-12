@@ -4,8 +4,8 @@
 
 import SingleFeadback from "../../components/single-feadback/single-feadback";
 import "./single.scss";
-const SinglePage = ({ feadbacks }) => {
-  return <SingleFeadback todo={feadbacks} />;
+const SinglePage = () => {
+  return <SingleFeadback />;
 };
 
 export default SinglePage;

@@ -6,13 +6,16 @@ import addPath from "../../assets/img/add-path.svg";
 // import Button from "../button/button";
 
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import Container from "../../components/container/container";
 import TypeBadge from "../../components/type-badge/type-badge";
 import Button from "../../components/button/button";
+import { DataContext } from "../../App";
 // import { useState } from "react";
 
-const AddTodo = ({ feadbacks, setFeadbacks }) => {
+const AddTodo = () => {
+  const { data, setData } = useContext(DataContext);
+
   const inputName = useRef();
   const filterType = useRef();
   const inputComments = useRef();
@@ -32,7 +35,7 @@ const AddTodo = ({ feadbacks, setFeadbacks }) => {
         description: inputDesc,
         comments: 0,
       };
-      setFeadbacks([newFeadback, ...feadbacks]);
+      setData([newFeadback, ...data]);
     }
     inputName.current.value = "";
     inputComments.current.value = "";

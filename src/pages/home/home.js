@@ -18,7 +18,7 @@ const Home = ({ feadbacks }) => {
         </div>
         <div className="home__right">
           <Header />
-          <FeadbackMap todo={feadbacks} />
+          <FeadbackMap />
         </div>
       </Container>
     </main>

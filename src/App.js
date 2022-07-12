@@ -6,25 +6,28 @@ import SingleTodo from "./pages/single-pages/single";
 import AddTodo from "./pages/AddTodo/add-todo";
 import dataJs from "./components/data/data";
 import { useState } from "react";
+import { createContext } from "react";
+
+export const DataContext = createContext();
 
 const App = () => {
-  const [feadbacks, setFeadbacks] = useState(dataJs);
+  const [data, setData] = useState(dataJs);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home feadbacks={feadbacks} />} />
-      <Route
-        path="/add"
-        element={<AddTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />}
-      />
-      <Route
-        path="/SingleTodo/:id"
-        element={
-          <SingleTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />
-        }
-      />
-    </Routes>
+    <DataContext.Provider value={{ data, setData }}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<AddTodo />} />
+        <Route path="/SingleTodo/:id" element={<SingleTodo />} />
+      </Routes>
+    </DataContext.Provider>
   );
 };
 
 export default App;
+
+{
+  /* <Route path="/" element={<Home feadbacks={feadbacks} />} />
+<Route path="/add" element={<AddTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />} />
+<Route path="/SingleTodo/:id" element={ <SingleTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />}  /> */
+}

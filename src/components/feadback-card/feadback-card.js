@@ -4,11 +4,14 @@ import likeImg from "../../assets/img/path.svg";
 import commentImg from "../../assets/img/comment.svg";
 import TypeBadge from "../type-badge/type-badge";
 import { Link } from "react-router-dom";
+// import { useContext } from "react";
+// import { DataContext } from "../../App";
 
 // import dataJs from "../data/data";
 // import { useState } from "react";
 
 const FeadbackCard = ({ todo }) => {
+  // const { data } = useContext(DataContext);
   // const [data, setData] = useState(dataJs);
   // console.log(todo);
   return (
