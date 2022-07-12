@@ -10,11 +10,12 @@ import FeadbackCard from "../feadback-card/feadback-card";
 
 const SingleFeadback = ({ todo }) => {
   const { id } = useParams();
+
   const currentTodo = todo.find((todo) => todo.id === +id);
   return (
     <Container className="feedback-container">
       <div className="feedback__top">
-        <Link className="add__link" to="/">
+        <Link  className="add__link" to="/">
           <img className="add__path" src={addPath} alt="img" />
           <p className="add__back-home">Go Back</p>
         </Link>
