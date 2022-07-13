@@ -7,6 +7,8 @@ import AddTodo from "./pages/AddTodo/add-todo";
 import dataJs from "./components/data/data";
 import { useState } from "react";
 import { createContext } from "react";
+import EditPages from "./pages/edit-page/edit";
+import RoadmapPages from "./pages/Roadmap/Roadmap-pages";
 
 export const DataContext = createContext();
 
@@ -18,6 +20,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddTodo />} />
+        <Route path="/edit/:id" element={<EditPages />} />
+        <Route path="/roadmap-pages" element={<RoadmapPages />} />
         <Route path="/SingleTodo/:id" element={<SingleTodo />} />
       </Routes>
     </DataContext.Provider>
@@ -25,9 +29,3 @@ const App = () => {
 };
 
 export default App;
-
-{
-  /* <Route path="/" element={<Home feadbacks={feadbacks} />} />
-<Route path="/add" element={<AddTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />} />
-<Route path="/SingleTodo/:id" element={ <SingleTodo feadbacks={feadbacks} setFeadbacks={setFeadbacks} />}  /> */
-}

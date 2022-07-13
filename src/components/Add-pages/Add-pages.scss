@@ -1,4 +1,10 @@
 .add {
+  &__wrapper {
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
   &__link {
     display: flex;
     flex-direction: row;
@@ -14,12 +20,6 @@
     font-size: 14px;
     line-height: 20px;
     color: #647196;
-  }
-
-  &__wrapper {
-    width: 540px;
-    margin: 0 auto;
-    margin-top: 100px;
   }
 
   &__card {

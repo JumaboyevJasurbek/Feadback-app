@@ -110,10 +110,10 @@ const AddTodo = () => {
                 </div>
               ))}
               <div className="add__button">
-                <Button className="add__cancel">Cancel</Button>
-                {/* <Link to="/"> */}
+                <Link to="/">
+                  <Button className="add__cancel">Cancel</Button>
+                </Link>
                 <Button className="add__submit">Add Feedback</Button>
-                {/* </Link> */}
               </div>
             </form>
           </div>

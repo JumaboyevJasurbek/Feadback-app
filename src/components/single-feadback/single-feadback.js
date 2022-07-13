@@ -14,7 +14,9 @@ const SingleFeadback = () => {
   const { data } = useContext(DataContext);
   const { id } = useParams();
 
-  const currentTodo = data.find((todo) => todo.id === +id);
+  const currentTodo = data?.find((todo) => todo.id === +id);
+
+  console.log(currentTodo.id);
   return (
     <Container className="feedback-container">
       <div className="feedback__top">
@@ -22,7 +24,9 @@ const SingleFeadback = () => {
           <img className="add__path" src={addPath} alt="img" />
           <p className="add__back-home">Go Back</p>
         </Link>
-        <Button className="feaedback--">Edit Feedback</Button>
+        <Link to={"/edit/ " + currentTodo.id}>
+          <Button>Edit Feedback</Button>
+        </Link>
       </div>
       <div className="feedback-main">
         <FeadbackCard todo={currentTodo} />
@@ -56,7 +60,7 @@ const SingleFeadback = () => {
           <FeadbackCard />
         )}
       </div>
-      <AddComment current={currentTodo.comments}></AddComment>
+      <AddComment></AddComment>
     </Container>
   );
 };

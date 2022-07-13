@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./roadmap.scss";
 
 const Roadmap = () => {
@@ -6,9 +7,9 @@ const Roadmap = () => {
       <div className="roadmap__wrapper">
         <div className="roadmap__wrapper-top">
           <h2 className="roadmap__heading">Roadmap</h2>
-          <a className="roadmap__link" href="/">
+          <Link className="roadmap__link" to="/roadmap-pages">
             View
-          </a>
+          </Link>
         </div>
 
         <div className="roadmap__list-wrapper">
